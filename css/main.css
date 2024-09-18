@@ -1,0 +1,140 @@
+/**Estilos Generales*/
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ordenar header main y footer */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+}
+
+/* estilos de header */
+
+header{
+    background-color: #4B22F4;
+}
+
+header nav{
+    width: 100%;
+}
+
+.navbar-brand:hover{
+    font-weight: 800;
+}
+
+.container-fluid a{
+    color: white;
+}
+
+.collapse ul li a{
+    color: white; 
+    position: relative;
+    font-size: 1rem;
+}
+
+.collapse ul li a:hover{
+    color: white;
+    font-weight: 600;
+}
+
+.collapse ul li a::after{
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 2px;
+    width: 0;
+    left: 0;
+    bottom: 0px;
+    transition: 0.3s;
+}
+
+.collapse ul li a:hover::after{
+    width: 100%;
+}
+
+main{
+    background-color: black;
+    color: whitesmoke;
+    padding: 1rem ;
+    min-width: 80%; /* evitar texto mas largo contenedor  */
+}
+
+.spotify{
+    display: flex;
+    gap: 1rem;
+    font-size: 1.5rem;
+}
+
+
+
+.videos iframe{
+    width: 25rem;
+    height: 15rem;
+}
+
+
+
+/* estilos del footer */
+footer{
+    background-color: #4B22F4;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+}
+
+img{
+    width: 80%;
+    height: 300px;
+    padding-bottom: 10px;
+}
+
+
+.logo img{
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+}
+
+/** ESTILOS MOBILE*/
+
+main{
+    display: grid;
+    gap: 1rem;
+}
+
+/** ESTILOS DESKTOP*/
+@media (min-width: 1024px) {
+    main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+    img{
+        max-width: 500px;
+    }
+    
+    .musica{
+        display: grid;
+    }
+
+    .albumes{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 2rem;
+    }
+    
+}
