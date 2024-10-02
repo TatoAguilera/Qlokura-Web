@@ -70,34 +70,34 @@
     </header>
 
     <main>
-      
-
       <!-- Formulario -->
-      <form action="">
+      <form action="" class="formulario">
         <h1>Contacto</h1>
         <p>Dejanos tu opinion acerca de la banda, la música y el contenido</p>
         <fieldset>
           <legend>Completa tus datos</legend>
-          <div>
-            <!-- campo para nombre -->
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Nombre" />
+          <div class="contenedor-campos">
+            <div class="campo">
+              <!-- campo para nombre -->
+              <label for="nombre">Nombre</label>
+              <input  class="input-text" type="text" id="nombre" name="nombre" placeholder="Nombre" />
+            </div>
+            <div class="campo">
+              <!-- campo para correo -->
+              <label for="correo">Email</label>
+              <input  class="input-text" type="email" id="correo" name="correo" placeholder="mail" />
+            </div>
+            <div class="campo">
+              <!-- campo para Opinion -->
+              <label for="mensaje">Opinion</label><br />
+              <textarea class="input-text" 
+                name="mensaje"
+                id="mensaje"
+                placeholder="Deja tu mensaje aca"
+              ></textarea>
+            </div>
           </div>
-          <div>
-            <!-- campo para correo -->
-            <label for="correo">Email</label>
-            <input type="email" id="correo" name="correo" placeholder="mail" />
-          </div>
-          <div>
-            <!-- campo para Opinion -->
-            <label for="mensaje">Opinion</label><br />
-            <textarea
-              name="mensaje"
-              id="mensaje"
-              placeholder="Deja tu mensaje aca"
-            ></textarea>
-          </div>
-          <div>
+          <div class="enviar">
             <!-- botones de enviar y -->
             <input type="submit" value="Enviar" />
           </div>
@@ -110,15 +110,14 @@
         <img src="../img/contacto/que-locura.jpg" alt="q'lokura cantando" />
         <p>Escuchados en todo el mundo</p>
       </div>
-
     </main>
 
     <footer>
       <div class="copyright">
-        <p>Página sin fines de lucro <br>
+        <p>
+          Página sin fines de lucro <br />
           Copyright: Carlos Aguilera
         </p>
-        
       </div>
 
       <!-- iconos redes -->

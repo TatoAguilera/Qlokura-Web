@@ -1,0 +1,158 @@
+//import
+@import "../utilidades/variables";
+@import "../utilidades/mixin";
+
+/* Estilos Generales */
+/* ordenar header main y footer */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+}
+/* estilos del Header*/
+header{
+    background-color: $color-principal;
+    .navbar-brand{
+        color: $color-secundario;
+    }
+    .navbar-brand:hover{
+        color: $color-secundario;
+        @include font-weight
+    }
+}
+
+.container-fluid a{
+    color: white;
+}
+
+.collapse ul li{
+    a{
+        color: $color-secundario;
+        position: relative;
+    }
+    a:hover{
+        color: $color-secundario;
+        @include font-weight
+    }
+    a::after{
+        content: "";
+        position: absolute;
+        background-color: $color-secundario;
+        height: 2px;
+        width: 0;
+        left: 0;
+        bottom: 0px;
+        transition: 0.3s;
+    }
+    a:hover::after{
+        width: 100%;
+    }
+}
+
+main{
+    background-color: $color-main;
+    color: $color-secundario;
+    padding: 1rem;
+    min-width: 80%;
+    @include flex
+}
+
+.spotify{    
+    font-size: 1.5rem;    
+    iframe{
+        width: auto;
+    }
+}
+
+.formulario{
+    background-color: $color-terciario;
+    padding: 1rem;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+    h1{
+        text-align: center;
+        font-size: 2.5rem;
+    }
+    fieldset{
+        border: none;
+    }
+    fieldset legend{
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+}
+
+
+
+.campo{
+    margin-bottom: .5rem;
+    label{
+        font-weight: bold;
+        margin-bottom: .3rem;
+        display: block;
+    }
+    textarea{
+        height: 10rem;
+    }
+}
+
+.input-text{
+    width: 100%;
+    border:none;
+    padding: .5rem;
+    border-radius: .5rem;
+}
+
+.enviar input{
+    background-color: $color-principal;
+    color: $color-secundario;
+    padding: .5rem 3rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: .5rem;
+    border: none;
+}
+
+
+
+
+
+
+footer{
+    background-color: $color-principal;
+    color: $color-secundario;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 1rem;
+    a{
+        text-decoration: none;
+        color: $color-secundario;
+        font-size: 1.5rem;
+    }
+}
+
+/*estilos imagenes*/
+
+img{
+    width: 90%;
+    padding-bottom: .5rem;
+}
+
+.logo img{
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+}
+
+/*Estilos MOBILE*/
+@media (min-width:1024px){
+    main{
+        min-height: 100vh;
+    }
+    img{
+        max-width: 500px;
+    }
+}
