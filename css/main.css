@@ -74,9 +74,10 @@ main {
 
 .formulario {
   background-color: #433878;
-  padding: 1rem;
+  padding: 1rem ;
   border-radius: 0.5rem;
-  margin-bottom: 1rem;
+  margin: 1rem 2rem;
+  width: 80%;
 }
 .formulario h1 {
   text-align: center;
@@ -156,11 +157,21 @@ img {
     min-height: 100vh;
     font-size: 1.3rem;
   }
-  .principal, .contacto {
+  .principal {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
+
+  .contacto{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .img-contacto{
+    text-align: center;
+  }
+
   .principal img, .contacto img {
     max-width: 600px;
     padding: 1rem 2rem;
