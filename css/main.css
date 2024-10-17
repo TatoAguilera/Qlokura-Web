@@ -58,6 +58,7 @@ main {
   color: white;
   padding: 1rem;
   min-width: 80%;
+  font-size: 1.1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -120,6 +121,10 @@ main {
   border: none;
 }
 
+textarea {
+  resize: none;
+}
+
 footer {
   background-color: #4B22F4;
   color: white;
@@ -145,13 +150,42 @@ img {
   margin-right: 10px;
 }
 
-/*Estilos MOBILE*/
+/*Estilos Compu*/
 @media (min-width: 1024px) {
   main {
     min-height: 100vh;
+    font-size: 1.3rem;
+  }
+  .principal, .contacto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .principal img, .contacto img {
+    max-width: 600px;
+    padding: 1rem 2rem;
   }
   img {
-    max-width: 500px;
+    height: 400px;
+    max-width: 400px;
+  }
+  .albumes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 3rem;
+  }
+  .img-eventos, .img-logros, .fotos, .videos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .spotify {
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    text-align: center;
+  }
+  footer {
+    font-size: 1.2rem;
   }
 }
 

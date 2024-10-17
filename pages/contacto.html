@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Formulario de contacto para compartir opinion acerca de su música y letras">
+    <meta name="keywords" content="QLokura, cba, CBA, cuarteto, música ">
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="icon" href="../img/logo.ico" type="image/x-ico" />
     <!-- bt5 -->
@@ -69,43 +71,45 @@
       </nav>
     </header>
 
-    <main>
+    <main class="contacto">
       <!-- Formulario -->
-      <form action="" class="formulario">
-        <h1>Contacto</h1>
-        <p>Dejanos tu opinion acerca de la banda, la música y el contenido</p>
-        <fieldset>
-          <legend>Completa tus datos</legend>
-          <div class="contenedor-campos">
-            <div class="campo">
-              <!-- campo para nombre -->
-              <label for="nombre">Nombre</label>
-              <input  class="input-text" type="text" id="nombre" name="nombre" placeholder="Nombre" />
+      <div class="formulario">
+        <form action="" class="">
+          <h1>Contacto</h1>
+          <p>Dejanos tu opinion acerca de la banda, la música y el contenido</p>
+          <fieldset>
+            <legend>Completa tus datos</legend>
+            <div class="contenedor-campos">
+              <div class="campo">
+                <!-- campo para nombre -->
+                <label for="nombre">Nombre</label>
+                <input  class="input-text" type="text" id="nombre" name="nombre" placeholder="Nombre" />
+              </div>
+              <div class="campo">
+                <!-- campo para correo -->
+                <label for="correo">Email</label>
+                <input  class="input-text" type="email" id="correo" name="correo" placeholder="mail" />
+              </div>
+              <div class="campo">
+                <!-- campo para Opinion -->
+                <label for="mensaje">Opinion</label><br />
+                <textarea class="input-text" 
+                  name="mensaje"
+                  id="mensaje"
+                  placeholder="Deja tu mensaje aca"
+                ></textarea>
+              </div>
             </div>
-            <div class="campo">
-              <!-- campo para correo -->
-              <label for="correo">Email</label>
-              <input  class="input-text" type="email" id="correo" name="correo" placeholder="mail" />
+            <div class="enviar">
+              <!-- botones de enviar y -->
+              <input type="submit" value="Enviar" />
             </div>
-            <div class="campo">
-              <!-- campo para Opinion -->
-              <label for="mensaje">Opinion</label><br />
-              <textarea class="input-text" 
-                name="mensaje"
-                id="mensaje"
-                placeholder="Deja tu mensaje aca"
-              ></textarea>
-            </div>
-          </div>
-          <div class="enviar">
-            <!-- botones de enviar y -->
-            <input type="submit" value="Enviar" />
-          </div>
-          <!-- required: requerimiento -->
-        </fieldset>
-      </form>
+            <!-- required: requerimiento -->
+          </fieldset>
+        </form>
+      </div>
 
-      <div class="img">
+      <div class="img-contacto">
         <img src="../img/contacto/movistar-arena.jpg" alt="movistar arena" />
         <img src="../img/contacto/que-locura.jpg" alt="q'lokura cantando" />
         <p>Escuchados en todo el mundo</p>

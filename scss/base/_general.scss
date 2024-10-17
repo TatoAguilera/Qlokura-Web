@@ -4,38 +4,43 @@
 
 /* Estilos Generales */
 /* ordenar header main y footer */
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
     display: grid;
     min-height: 100vh;
     grid-template-rows: auto 1fr auto;
 }
+
 /* estilos del Header*/
-header{
+header {
     background-color: $color-principal;
-    .navbar-brand{
+
+    .navbar-brand {
         color: $color-secundario;
     }
-    .navbar-brand:hover{
+
+    .navbar-brand:hover {
         color: $color-secundario;
-        @include font-weight
+        @include font-weight;
     }
 }
 
-.container-fluid a{
+.container-fluid a {
     color: white;
 }
 
-.collapse ul li{
-    a{
+.collapse ul li {
+    a {
         color: $color-secundario;
         position: relative;
     }
-    a:hover{
+
+    a:hover {
         color: $color-secundario;
-        @include font-weight
+        @include font-weight;
     }
-    a::after{
+
+    a::after {
         content: "";
         position: absolute;
         background-color: $color-secundario;
@@ -45,39 +50,45 @@ header{
         bottom: 0px;
         transition: 0.3s;
     }
-    a:hover::after{
+
+    a:hover::after {
         width: 100%;
     }
 }
 
-main{
+main {
     background-color: $color-main;
     color: $color-secundario;
     padding: 1rem;
     min-width: 80%;
-    @include flex
+    font-size: 1.1rem;
+    @include flex;
 }
 
-.spotify{    
-    font-size: 1.5rem;    
-    iframe{
+.spotify {
+    font-size: 1.5rem;
+
+    iframe {
         width: auto;
     }
 }
 
-.formulario{
+.formulario {
     background-color: $color-terciario;
     padding: 1rem;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     margin-bottom: 1rem;
-    h1{
+
+    h1 {
         text-align: center;
         font-size: 2.5rem;
     }
-    fieldset{
+
+    fieldset {
         border: none;
     }
-    fieldset legend{
+
+    fieldset legend {
         text-align: center;
         text-transform: uppercase;
         font-weight: 600;
@@ -85,49 +96,49 @@ main{
     }
 }
 
+.campo {
+    margin-bottom: 0.5rem;
 
-
-.campo{
-    margin-bottom: .5rem;
-    label{
+    label {
         font-weight: bold;
-        margin-bottom: .3rem;
+        margin-bottom: 0.3rem;
         display: block;
     }
-    textarea{
+
+    textarea {
         height: 10rem;
     }
 }
 
-.input-text{
+.input-text {
     width: 100%;
-    border:none;
-    padding: .5rem;
-    border-radius: .5rem;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
 }
 
-.enviar input{
+.enviar input {
     background-color: $color-principal;
     color: $color-secundario;
-    padding: .5rem 3rem;
+    padding: 0.5rem 3rem;
     text-decoration: none;
     text-transform: uppercase;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     border: none;
 }
 
+textarea {
+    resize: none;
+}
 
-
-
-
-
-footer{
+footer {
     background-color: $color-principal;
     color: $color-secundario;
     display: flex;
     justify-content: space-around;
     padding-top: 1rem;
-    a{
+
+    a {
         text-decoration: none;
         color: $color-secundario;
         font-size: 1.5rem;
@@ -136,23 +147,58 @@ footer{
 
 /*estilos imagenes*/
 
-img{
+img {
     width: 90%;
-    padding-bottom: .5rem;
+    padding-bottom: 0.5rem;
 }
 
-.logo img{
+.logo img {
     width: 70px;
     height: 70px;
     margin-right: 10px;
 }
 
-/*Estilos MOBILE*/
-@media (min-width:1024px){
-    main{
+/*Estilos Compu*/
+@media (min-width: 1024px) {
+    main {
         min-height: 100vh;
+        font-size: 1.3rem;
     }
-    img{
-        max-width: 500px;
+
+    .principal, .contacto {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        img {
+            max-width: 600px;
+            padding: 1rem 2rem;
+        }
+    }
+
+    img {
+        height: 400px;
+        max-width: 400px;
+    }
+
+    .albumes {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 3rem;
+    }
+
+    .img-eventos, .img-logros, .fotos, .videos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .spotify {
+        margin-bottom: 2rem;
+        font-size: 3rem;
+        text-align: center;
+    }
+    footer{
+        font-size: 1.2rem;
     }
 }
