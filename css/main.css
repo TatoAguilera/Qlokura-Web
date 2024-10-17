@@ -198,6 +198,13 @@ img {
   footer {
     font-size: 1.2rem;
   }
+  .videos{
+    width: 80%;
+  }
+  .videos iframe{
+    width: 90%;
+    height: 200px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
